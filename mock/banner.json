@@ -1,0 +1,51 @@
+{
+	"data": [{
+		"config": [{
+			"adId": 1667,
+			"frame": 1,
+			"image": "http://p1.meituan.net/movie/b135e99149909600f35bb8187077eeea653433.png",
+			"link": "meituanmovie://www.meituan.com/web?url=http://i.meituan.com/firework/ne1522059280",
+			"materialId": 734
+		}, {
+			"adId": 1738,
+			"frame": 2,
+			"image": "http://p0.meituan.net/movie/e68ddb3910dad16f135d257dbfcf4a3f113381.jpg",
+			"link": "meituanmovie://www.meituan.com/videolist?id=343720&name=%e5%90%8e%e6%9d%a5%e7%9a%84%e6%88%91%e4%bb%ac&videoId=92495",
+			"materialId": 731
+		}, {
+			"adId": 1696,
+			"frame": 3,
+			"image": "http://p1.meituan.net/movie/e3a4905d0eebd518e0de5afd002b5916711786.jpg",
+			"link": "meituanmovie://www.meituan.com/web?url=http://i.meituan.com/firework/wh1521776422",
+			"materialId": 640
+		}, {
+			"adId": 1810,
+			"frame": 4,
+			"image": "http://p0.meituan.net/movie/d6b24bc101c48f3bfe715bb919aa4b71290941.jpg",
+			"link": "meituanmovie://www.meituan.com/movie?id=881837&nm=%e8%b5%b7%e8%b7%91%e7%ba%bf",
+			"materialId": 781
+		}, {
+			"adId": 1763,
+			"frame": 5,
+			"image": "http://p0.meituan.net/movie/db6bc312401bb95d61905f74f148eba1184084.jpg",
+			"link": "meituanmovie://www.meituan.com/movie?id=343176&nm=%e5%a5%87%e8%91%a9%e6%9c%b5%e6%9c%b5",
+			"materialId": 739
+		}, {
+			"adId": 1814,
+			"frame": 11,
+			"image": "http://p1.meituan.net/movie/e96941d29cb373f8f81c8cec1a399cac288738.jpg",
+			"link": "meituanmovie://www.meituan.com/movie?id=345991&nm=%e6%9a%b4%e8%a3%82%e6%97%a0%e5%a3%b0",
+			"materialId": 775
+		}, {
+			"adId": 1737,
+			"frame": 13,
+			"image": "http://p1.meituan.net/movie/cfce915fcf5e1f49681d256b7f08ee9c118499.jpg",
+			"link": "meituanmovie://www.meituan.com/web?url=http://m.maoyan.com/cinema-on-demand/list",
+			"materialId": 689
+		}],
+		"positionId": 1021,
+		"positionName": "猫眼APP首页顶通Banner",
+		"type": 1
+	}],
+	"success": true
+}
