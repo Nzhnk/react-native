@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { View, Text, Image } from 'react-native';
+import { View, Text, Image, ScrollView } from 'react-native';
 
 class MovieDetails extends Component {
 	static navigationOptions = {
@@ -10,14 +10,15 @@ class MovieDetails extends Component {
 		headerTintColor: '#fff',
 		headerTitleStyle: {
 		  fontWeight: 'normal',
-		},
-		headerRight: (<Image style={{width:16,height:16}} source={require('../../resource/images/right_arrow_red.png')}/>)
+		}
 	};
 
 	render() {
 		return (
-			<View>
+			<View style={{flex:1}}>
 				<Text>电影详情</Text>
+				<ScrollView style={{flex:1}}></ScrollView>
+				<Text>特惠购票</Text>
 			</View>
 		);
 	}

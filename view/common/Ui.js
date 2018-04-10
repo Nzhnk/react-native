@@ -121,7 +121,7 @@ class CommonCmpt extends Component {
 							<Image style={{width:125,height:93,borderRadius:3}} source={require('../../resource/images/hotMovie.png')}/>
 							<Image style={{width:125,height:93,borderRadius:3}} source={require('../../resource/images/hotMovie.png')}/>
 						</View>
-						<View>
+						<View style={{flexDirection:'row',justifyContent:'space-between'}}>
 							<Text>猫眼资讯 21分钟前</Text>
 							<Text>评论人数</Text>
 						</View>

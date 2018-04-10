@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Image } from 'react-native';
+import { View, Image, StatusBar } from 'react-native';
 import TabNavigator from 'react-native-tab-navigator';
 import { View as Index } from '../index/'; // 在index文件夹下有index.js
 import { View as Movie } from '../movie/';
@@ -26,6 +26,7 @@ class Home extends Component {
 		const mineIcon = require( '../../resource/images/mine.png' );
 		const mine_actIcon = require( '../../resource/images/mine_act.png' );
 		return (
+			<View style={{flex:1}}>
 			<TabNavigator>
 				<TabNavigator.Item
 				  selected={this.props.selectedTab === 'index'}
@@ -46,7 +47,7 @@ class Home extends Component {
 				  title="电影"
 				  selectedTitleStyle={{color:"#d24645"}}
 				>
-					<Movie />
+					<Movie navigate={this.props.navigation.navigate}/>
 				</TabNavigator.Item>
 				<TabNavigator.Item
 				  selected={this.props.selectedTab === 'cinema'}
@@ -79,6 +80,7 @@ class Home extends Component {
 					<Mine />
 				</TabNavigator.Item>
 			</TabNavigator>
+			</View>
 		);
 	}
 };

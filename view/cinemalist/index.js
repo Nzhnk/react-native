@@ -1,3 +1,4 @@
 import View from './View.js';
-// TODO
-export { View };
+import reducer from './reducer/reducer.js';
+
+export { View, reducer };

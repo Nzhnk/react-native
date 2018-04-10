@@ -1,0 +1,1 @@
+export const CINEMA_LIST = 'cinema/CINEMA_LIST';
