@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { View, Text, Dimensions, FlatList, Image, TouchableWithoutFeedback } from 'react-native';
+import { View, Text, Dimensions, FlatList, Image, TouchableWithoutFeedback,StatusBar } from 'react-native';
 import ScrollableTabView from 'react-native-scrollable-tab-view';
 import styles from '../../styles/movielist.js';
 
@@ -10,8 +10,10 @@ class Movie extends Component {
 	render() {
 		const { width } = Dimensions.get( 'window' );
 		const underlineWidth = width * 0.5;
+		const _SH = StatusBar.currentHeight;
 		return (
 			<View style={styles.container}>
+				<View style={{height:_SH, backgroundColor:'#f00'}}></View>
 				<ScrollableTabView
 				  tabBarStyle={{width:'50%'}}
 				  tabBarBackgroundColor='#f03d38'
@@ -30,7 +32,7 @@ class Movie extends Component {
 					<FlatList
 					  tabLabel="正在热映"
 					  data={this.props.hotMovieList.hot}
-					  keyExtractor={(item, index) => index}
+					  keyExtractor={(item, index) => index.toString()}
 					  renderItem={({item}) => (
 						<View style={styles.hot} key={item.id}>
 							<TouchableWithoutFeedback onPress={() => {this.props.navigate( 'Detail' )}}>
@@ -56,7 +58,7 @@ class Movie extends Component {
 					<FlatList
 					  tabLabel="即将上映"
 					  data={this.props.hotMovieList.coming}
-					  keyExtractor={(item, index) => index}
+					  keyExtractor={(item, index) => index.toString()}
 					  renderItem={({item}) => (
 						<View style={{height:125,flexDirection:'row',backgroundColor:'#fff',alignItems:'center'}} key={item.id}>
 							<Image style={{height:93,width:65,borderRadius:3,marginLeft:20,marginRight:11}} source={{uri:item.img}}/>

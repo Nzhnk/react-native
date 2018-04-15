@@ -13,8 +13,7 @@ const styles = StyleSheet.create({
 		zIndex: 9999,
 		flexDirection: 'row',
 		paddingLeft: 13,
-		paddingRight: 13,
-		marginTop: 13
+		paddingRight: 13
 	},
 	topAddress: {
 		width: 50,

@@ -12,7 +12,7 @@ const mapDispatch = (dispatch) => ({
 		fetch(url)
 		.then(res => res.json())
 		.then((res) => {
-			const action = cinemaListAction(res.cinema)
+			const action = cinemaListAction(res.data.cinemas)
 			dispatch(action)
 		})
 	}

@@ -1,35 +1,24 @@
 import React, { Component } from 'react';
-import { View, Text, ScrollView, Image, TouchableWithoutFeedback } from 'react-native';
+import { View, Text, ScrollView, Image, Dimensions, TouchableWithoutFeedback, Flatlist } from 'react-native';
 import Swiper from 'react-native-swiper';
+import styles from '../../styles/common.js';
 
 class CommonCmpt extends Component {
 	render() {
+		const { width } = Dimensions.get( 'window' );
+		const rightArrow = require( '../../resource/images/right_arrow.png' );
 		return (
-			<ScrollView style={{
-			  backgroundColor: '#f5f5f5'
-			}}>
-				<View style={{marginTop:10}}>
-					<View style={{
-					  backgroundColor: '#fff',
-					  paddingLeft: 10,
-					  paddingRight: 15,
-					  flexDirection: 'row',
-					  justifyContent: 'space-between',
-					  height: 40,
-					  alignItems: 'center'
-					}}>
-						<View><Text style={{fontWeight:'bold',fontSize: 14}}>正在热映</Text></View>
-						<View style={{
-						  flexDirection: 'row',
-						  alignItems: 'center'
-						}}>
-							<Text style={{color:'#9b9b9b',fontSize: 12}}>全部(48)</Text><Image style={{width:16,height:16}} source={require('../../resource/images/right_arrow.png')}/>
+			<ScrollView style={styles.scrollView}>
+				<View style={styles.hotPosi}>
+					<View style={styles.hotFilm}>
+						<View><Text style={styles.hotTitle}>正在热映</Text></View>
+						<View style={styles.hotAll}>
+							<Text style={styles.hotAllCont}
+							onPress={() => {this.props.navigate( 'List' )}} >全部(48)</Text>
+							<Image style={styles.hotImage} source={rightArrow}/>
 						</View>
 					</View>
-					<View style={{
-					  width:'100%',
-					  backgroundColor: '#fff'
-					}}>
+					<View style={styles.hotFilmBox}>
 						<ScrollView
 						  horizontal={true}
 						  showsHorizontalScrollIndicator={false}
@@ -37,45 +26,23 @@ class CommonCmpt extends Component {
 							<TouchableWithoutFeedback
 							  onPress={() => {this.props.navigate( 'Detail' )}}
 							>
-								<View style={{marginLeft: 15, marginRight:6}}>
-									<Image style={{width:100,height:140,borderRadius:2}} source={require('../../resource/images/hotMovie.png')}/>
-									<Text style={{color:'#313131',fontWeight:'bold',fontSize:14,marginTop:12,marginBottom:12,width:100}} numberOfLines={1} ellipsizeMode='tail'>环太平洋:雷霆再起</Text>
-									<View style={{backgroundColor:'#f03d38',height: 25,width:50,borderRadius:12,alignItems:'center',justifyContent:'center',marginBottom:17}}>
-										<Text style={{fontWeight:'bold',color:'#fff',fontSize:11}}>购票</Text>
+								<View style={styles.hotFilmItem}>
+									<Image style={{width:width*0.2435,height:width*0.2435*1.4,borderRadius:2}} source={require('../../resource/images/hotMovie.png')}/>
+									<Text style={styles.hotFilmText} numberOfLines={1} ellipsizeMode='tail'>环太平洋:雷霆再起</Text>
+									<View style={styles.hotFilmBuy}>
+										<Text style={styles.hotFilmBuyCont}>购票</Text>
 									</View>
 								</View>
 							</TouchableWithoutFeedback>
-							<View style={{marginLeft: 6, marginRight:6}}>
-								<Image style={{width:100,height:140,borderRadius:2}} source={require('../../resource/images/hotMovie.png')}/>
-							</View>
-							<View style={{marginLeft: 6, marginRight:6}}>
-								<Image style={{width:100,height:140,borderRadius:2}} source={require('../../resource/images/hotMovie.png')}/>
-							</View>
-							<View style={{marginLeft: 6, marginRight:6}}>
-								<Image style={{width:100,height:140,borderRadius:2}} source={require('../../resource/images/hotMovie.png')}/>
-							</View>
-							<View style={{marginLeft: 6, marginRight:6}}>
-								<Image style={{width:100,height:140,borderRadius:2}} source={require('../../resource/images/hotMovie.png')}/>
-							</View>
 						</ScrollView>
 					</View>
 				</View>
 				<View style={{marginTop:10}}>
-					<View style={{
-					  backgroundColor: '#fff',
-					  paddingLeft: 10,
-					  paddingRight: 15,
-					  flexDirection: 'row',
-					  justifyContent: 'space-between',
-					  height: 40,
-					  alignItems: 'center'
-					}}>
-						<View><Text style={{fontWeight:'bold',fontSize: 16}}>正在热映</Text></View>
-						<View style={{
-						  flexDirection: 'row',
-						  alignItems: 'center'
-						}}>
-							<Text style={{color:'#9b9b9b',fontSize: 16}}>全部(48)</Text><Image style={{width:16,height:16}} source={require('../../resource/images/right_arrow.png')}/>
+					<View style={styles.hotFilm}>
+						<View><Text style={styles.hotTitle}>即将上映</Text></View>
+						<View style={styles.hotAll}>
+							<Text style={styles.hotAllCont}>全部(48)</Text>
+							<Image style={styles.hotImage} source={rightArrow}/>
 						</View>
 					</View>
 					<View style={{
@@ -84,28 +51,8 @@ class CommonCmpt extends Component {
 					}}>
 						<View style={{flexDirection:'row',flexWrap:'wrap'}}>
 							<View style={{marginLeft: 16, marginRight:16}}>
-								<Image style={{width:100,height:135,borderRadius:2}} source={require('../../resource/images/hotMovie.png')}/>
+								<Image style={{width:width*0.2435,height:width*0.2435*1.4,borderRadius:2}} source={require('../../resource/images/hotMovie.png')}/>
 								<Text style={{color:'#313131',fontWeight:'bold',fontSize:14,marginTop:8,marginBottom:8}}>头号玩家</Text>
-							</View>
-							<View style={{marginLeft: 16, marginRight:16}}>
-								<Image style={{width:100,height:135,borderRadius:2}} source={require('../../resource/images/hotMovie.png')}/>
-								<Text style={{color:'#313131',fontWeight:'bold',fontSize:14,marginTop:8,marginBottom:8}}></Text>
-							</View>
-							<View style={{marginLeft: 16, marginRight:16}}>
-								<Image style={{width:100,height:135,borderRadius:2}} source={require('../../resource/images/hotMovie.png')}/>
-								<Text style={{color:'#313131',fontWeight:'bold',fontSize:14,marginTop:8,marginBottom:8}}></Text>
-							</View>
-							<View style={{marginLeft: 16, marginRight:16}}>
-								<Image style={{width:100,height:135,borderRadius:2}} source={require('../../resource/images/hotMovie.png')}/>
-								<Text style={{color:'#313131',fontWeight:'bold',fontSize:14,marginTop:8,marginBottom:8}}></Text>
-							</View>
-							<View style={{marginLeft: 16, marginRight:16}}>
-								<Image style={{width:100,height:135,borderRadius:2}} source={require('../../resource/images/hotMovie.png')}/>
-								<Text style={{color:'#313131',fontWeight:'bold',fontSize:14,marginTop:8,marginBottom:8}}></Text>
-							</View>
-							<View style={{marginLeft: 16, marginRight:16}}>
-								<Image style={{width:100,height:135,borderRadius:2}} source={require('../../resource/images/hotMovie.png')}/>
-								<Text style={{color:'#313131',fontWeight:'bold',fontSize:14,marginTop:8,marginBottom:8}}></Text>
 							</View>
 						</View>
 						<View style={{flexDirection:'row',height:44,justifyContent:'center',alignItems:'center',borderTopWidth:1,borderTopColor:'#e5e5e5'}}>

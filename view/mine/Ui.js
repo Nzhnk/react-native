@@ -1,10 +1,12 @@
 import React, { Component } from 'react';
-import { View, Text, Image, ScrollView } from 'react-native';
+import { View, Text, Image, ScrollView, StatusBar } from 'react-native';
 
 class Mine extends Component {
 	render() {
+		const _SH = StatusBar.currentHeight;
 		return (
 			<View style={{flex:1}}>
+				<View style={{height:_SH, backgroundColor:'#f00'}}></View>
 				<ScrollView style={{flex:1,backgroundColor:'#f5f5f5'}}>
 					<View style={{height:110,backgroundColor:'#dd403b',flexDirection:'row',alignItems:'center',justifyContent:'space-between'}}>
 						<View style={{flexDirection:'row',height:110,alignItems:'center',paddingLeft:15}}>

@@ -1,11 +1,13 @@
 import React, { Component } from 'react';
-import { View, Text, Image, ScrollView, Dimensions } from 'react-native';
+import { View, Text, Image, ScrollView, Dimensions, StatusBar } from 'react-native';
 
 class Perform extends Component {
 	render() {
 		const { width } = Dimensions.get( 'window' );
+		const _SH = StatusBar.currentHeight;
 		return (
 			<View style={{flex:1,backgroundColor:'#f5f5f5'}}>
+				<View style={{height:_SH, backgroundColor:'#f00'}}></View>
 				<View style={{height:50,backgroundColor:'#dd403b',flexDirection:'row',justifyContent:'space-between',alignItems:'center',paddingLeft:10,paddingRight:10}}>
 					<View style={{flexDirection:'row',alignItems:'center'}}>
 						<Text style={{color:'#fff'}}>北京</Text><Image style={{width:16,height:16}} source={require('../../resource/images/down_arrow.png')}/>
